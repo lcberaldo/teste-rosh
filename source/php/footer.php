@@ -102,11 +102,19 @@
       navPosition: "bottom",
       autoplayButtonOutput: false,
       responsive: {
-        1200: {
-          items: 5,
+        600: {
+          items: 3,
+          slideBy: 1,
           edgePadding: 80,
           gutter: 80,
-          slideBy: 1,
+
+        },
+        800: {
+          items: 4,
+        },
+        1200: {
+          items: 5,
+
         },
       },
     });
@@ -126,6 +134,11 @@
         '<i class="fa-solid fa-arrow-right-long"></i>',
       ],
       responsive: {
+        600: {
+          items: 2,
+          gutter: 20,
+        },
+
         1200: {
           items: 3,
           gutter: 20,

@@ -1,6 +1,7 @@
 <?php
 
 $is_mobile = 'false';
+$number_of_posts;
 
 $iphone = strpos($_SERVER['HTTP_USER_AGENT'], "iPhone");
 $android = strpos($_SERVER['HTTP_USER_AGENT'], "Android");
@@ -12,15 +13,16 @@ if ($iphone || $android || $ipad || $ipod || $berry == true) {
   $is_mobile = 'true';
 };
 
-$number_of_posts = 4;
 
 if ($is_mobile === 'true') {
   $number_of_posts = 2;
+} else {
+  $number_of_posts = 4;
 }
 
 
 
-get_header(); ?> <section class="banner"><div class="banner-lg d-none d-lg-block" style="background: url(<?= the_field('banner_desktop'); ?>)"></div><img class="img-fluid d-lg-none" src="<?= the_field('banner_mobile'); ?>" alt=""><div class="container col-lg-4"><h2><?= the_field('titulo_banner'); ?></h2><p><?= the_field('texto_banner'); ?></p><div class="d-flex align-items-center justify-content-between col-lg-10"><a class="btn-cta" href="#">Contato</a> <a href="#" class="video">Assista o Vídeo <i class="fa-solid fa-caret-right"></i></a></div></div></section><section id="sobre" data-aos="fade-up"><div class="wrapper"><div class="carousel-clientes"> <?php
+get_header(); ?> <section class="banner"><div class="banner-lg d-none d-lg-block" style="background: url(<?= the_field('banner_desktop'); ?>)"></div><img class="img-fluid d-lg-none" src="<?= the_field('banner_mobile'); ?>" alt=""><div class="container col-lg-5 col-xl-4"><h2><?= the_field('titulo_banner'); ?></h2><p><?= the_field('texto_banner'); ?></p><div class="d-flex align-items-center justify-content-between col-lg-10"><a class="btn-cta" href="#">Contato</a> <a href="#" class="video">Assista o Vídeo <i class="fa-solid fa-caret-right"></i></a></div></div></section><section id="sobre" data-aos="fade-up"><div class="wrapper"><div class="carousel-clientes"> <?php
 
       if (have_rows('clientes')) :
 
@@ -42,7 +44,7 @@ get_header(); ?> <section class="banner"><div class="banner-lg d-none d-lg-block
 
     $counter = 0;
 
-    if ($new_query->have_posts()) : ?> <div class="projetos-box d-lg-flex flex-wrap justify-content-between"> <?php while ($new_query->have_posts()) : $new_query->the_post();  ?> <div class="projeto" <?php if ($counter % 2 == 0) : ?> data-aos="fade-right" <?php else : ?> data-aos="fade-left" <?php endif; ?>><img class="img-fluid" src="<?= the_post_thumbnail_url(); ?>" alt=""><div class="d-flex align-items-center mt-3"><h4 class="projeto-title"><?= the_title(); ?></h4><a href="#" class="green-cta">Ver Detalhes</a></div></div> <?php $counter++;
+    if ($new_query->have_posts()) : ?> <div class="projetos-box d-lg-flex flex-wrap justify-content-between"> <?php while ($new_query->have_posts()) : $new_query->the_post();  ?> <div class="projeto" <?php if ($counter % 2 == 0) : ?> data-aos="fade-right" <?php else : ?> data-aos="fade-left" <?php endif; ?>><img class="img-fluid" src="<?= the_post_thumbnail_url(); ?>" alt=""><div class="d-flex align-items-center justify-content-between col-md-7 col-lg-12 px-lg-0 mt-3"><h4 class="projeto-title"><?= the_title(); ?></h4><a href="#" class="green-cta">Ver Detalhes</a></div></div> <?php $counter++;
         endwhile; ?> </div> <?php endif;
 
     wp_reset_query(); ?> <a href="#" class="btn-cta">Ver Todos</a></div></section><section id="depoimentos" data-aos="flip-left"><div class="container"><span class="mini-title">Depoimentos</span><h3 class="title">O que os clientes dizem</h3><div class="depo-box"><div class="gray-square"></div><div class="wrapper"><div class="carousel-depoimentos"> <?php

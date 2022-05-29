@@ -206,3 +206,28 @@
     }
   }
 }
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .banner {
+    img {
+      width: 100%;
+    }
+  }
+
+  #portfolio {
+    .projetos-box {
+      .projeto {
+        margin: 0 auto;
+
+        img {
+          margin: 0 auto;
+          display: block;
+        }
+
+        div {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

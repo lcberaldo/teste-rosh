@@ -2,6 +2,7 @@
   background: #49ad09;
   padding-top: 15px;
   padding-bottom: 15px;
+  width: 100%;
 
   position: fixed;
   top: 0;
@@ -30,6 +31,7 @@
       color: white;
       padding: 5px 10px;
       display: inline;
+      cursor: pointer;
     }
   }
 
@@ -116,7 +118,6 @@
   }
 
   @media (min-width: map-get($grid-breakpoints,lg)) {
-    width: 100%;
     background: #f2f2f2;
 
     .lg-box {
@@ -146,6 +147,11 @@
           top: unset;
           color: #313131;
           padding: 5px 20px;
+
+          &:hover {
+            color: #49ad09;
+            text-decoration: underline;
+          }
 
           &.signup {
             width: fit-content;

@@ -1,6 +1,7 @@
 <?php
 
 $is_mobile = 'false';
+$number_of_posts;
 
 $iphone = strpos($_SERVER['HTTP_USER_AGENT'], "iPhone");
 $android = strpos($_SERVER['HTTP_USER_AGENT'], "Android");
@@ -12,10 +13,11 @@ if ($iphone || $android || $ipad || $ipod || $berry == true) {
   $is_mobile = 'true';
 };
 
-$number_of_posts = 4;
 
 if ($is_mobile === 'true') {
   $number_of_posts = 2;
+} else {
+  $number_of_posts = 4;
 }
 
 
@@ -29,7 +31,7 @@ get_header(); ?>
 
   <img class="img-fluid d-lg-none" src="<?= the_field('banner_mobile'); ?>" alt="">
 
-  <div class="container col-lg-4">
+  <div class="container col-lg-5 col-xl-4">
 
     <h2><?= the_field('titulo_banner'); ?></h2>
 
@@ -139,7 +141,7 @@ get_header(); ?>
 
             <img class="img-fluid" src="<?= the_post_thumbnail_url(); ?>" alt="">
 
-            <div class="d-flex align-items-center mt-3">
+            <div class="d-flex align-items-center justify-content-between col-md-7 col-lg-12 px-lg-0 mt-3">
               <h4 class="projeto-title"><?= the_title(); ?></h4>
               <a href="#" class="green-cta">Ver Detalhes</a>
             </div>

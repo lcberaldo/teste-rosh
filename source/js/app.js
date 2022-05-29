@@ -8,8 +8,11 @@ $(function () {
 
 $(".link").on("click", function (e) {
   e.preventDefault();
-  $(".menu").toggleClass("opened");
-  $(".hamburger").toggleClass("is-active");
+
+  if (window.innerWidth <= 800) {
+    $(".menu").toggleClass("opened");
+    $(".hamburger").toggleClass("is-active");
+  }
 
   $("html,body").animate(
     {
