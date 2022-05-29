@@ -1,0 +1,35 @@
+{
+  "name": "bower-to-webpack",
+  "description": "Bye bye Bower! Or how to migrate from Bower to npm and Webpack",
+  "author": "Andrejs Abrickis",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-image": "^5.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.4.1",
+    "node-sass": "^5.0.0",
+    "tiny-slider": "^2.9.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "gulp-cache": "^1.1.3",
+    "gulp-connect": "^5.7.0"
+  },
+  "scripts": {
+    "webpack": "webpack"
+  }
+}

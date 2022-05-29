@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+.banner {
+  margin-top: 80px;
+
+  padding-bottom: 50px;
+
+  h2 {
+    padding-top: 50px;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 50px;
+
+    letter-spacing: -0.05em;
+
+    color: #313131;
+
+    span {
+      color: #49ad09;
+    }
+  }
+
+  p {
+    margin: 15px 0;
+    display: block;
+  }
+
+  .video {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    text-decoration-line: underline;
+
+    color: #514040;
+  }
+}
+
+#sobre {
+  .tns-nav {
+    text-align: center;
+    button {
+      border-radius: 50%;
+      background: #acabab;
+      border: none;
+      display: inline;
+      content: "⚫";
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+
+      &.tns-nav-active {
+        background: #49ad09;
+      }
+    }
+  }
+
+  .container {
+    margin-top: 50px;
+
+    .card-box {
+      .card {
+        padding: 20px;
+        .header {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+
+          .card-title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 20px;
+            color: #313131;
+            margin-bottom: 0;
+            margin-left: 15px;
+          }
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 23px;
+          color: #514040;
+        }
+
+        & + .card {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .btn-cta {
+      margin: 50px auto;
+    }
+  }
+}
+
+#portfolio {
+  .projetos-box {
+    .projeto {
+      .projeto-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #000000;
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+
+      & + .projeto {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .btn-cta {
+    margin: 50px auto;
+  }
+}
+
+#depoimentos {
+  .depo-box {
+    margin-bottom: 60px;
+
+    .tns-controls {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+
+      width: 100px;
+      height: 46px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      background: #f8f6f6;
+      border-radius: 70px;
+
+      button {
+        background: none;
+        border: none;
+        padding: 5px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background: black;
+        color: white;
+
+        &[disabled] {
+          background-color: transparent !important;
+          color: black;
+        }
+      }
+    }
+
+    .carousel-depoimentos {
+      .depo {
+        border: 1px solid #49ad09;
+        border-radius: 10px;
+        padding: 30px 20px;
+
+        .short-comment {
+          font-family: "Inter";
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          color: #32435c;
+          margin-bottom: 30px;
+        }
+
+        p {
+          font-family: "Inter";
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 30px;
+          letter-spacing: -0.01em;
+          color: #6a635b;
+        }
+
+        .nome {
+          font-family: "Inter";
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          color: #32435c;
+        }
+      }
+    }
+  }
+}
+
+#precos {
+  padding-bottom: 50px;
+
+  .card-box {
+    .card-item {
+      padding: 40px;
+      border: 1px solid #ededed;
+      border-radius: 5px;
+      filter: drop-shadow(0px 20px 40px rgba(191, 191, 191, 0.16));
+
+      .for-who {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
+        color: #313131;
+        margin-bottom: 33px;
+      }
+
+      .preco {
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 39px;
+        text-transform: capitalize;
+        color: #313131;
+        margin-bottom: 33px;
+        text-align: center;
+      }
+
+      .attr {
+        li {
+          list-style-image: url("../../dist/img/list-style.png");
+        }
+      }
+
+      .btn-cta-unfilled {
+        background: transparent !important;
+        border: 1px solid #514040;
+        color: #514040;
+        font-size: 16px;
+        margin: 0 auto;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+        box-shadow: none;
+      }
+
+      & + .card-item {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+#contato {
+  padding-bottom: 50px;
+
+  .btn-cta {
+    margin: 0 auto;
+  }
+}

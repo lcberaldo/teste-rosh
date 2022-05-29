@@ -1,0 +1,139 @@
+footer {
+  text-align: center;
+  border-top: 2px solid #49ad09;
+  padding-top: 40px;
+
+  .midias {
+    margin-bottom: 40px;
+    a {
+      color: #49ad09;
+      padding: 15px;
+    }
+  }
+
+  .links {
+    .titulo {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: #1c1c1d;
+
+      margin-bottom: 20px;
+    }
+
+    a {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      color: #313131;
+      padding: 10px 0;
+      display: block;
+    }
+
+    & + .links {
+      margin-top: 40px;
+    }
+
+    &.contato {
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #f2f2f2;
+        border-radius: 4px;
+        width: 80%;
+        margin: 0 auto;
+
+        input[type="email"] {
+          border: none;
+          background: none;
+          padding: 5px;
+          outline: none;
+        }
+
+        button {
+          background: none;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .copy {
+    border-top: 1px solid #ededed;
+    padding: 10px;
+    margin-top: 30px;
+
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      color: #313131;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints,lg)) {
+    border-top: none;
+    padding-top: 0;
+
+    div {
+      text-align: left !important;
+    }
+
+    .midias {
+      display: flex;
+
+      a {
+        width: 28px;
+        height: 28px;
+        background: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border-radius: 5px;
+        margin-right: 15px;
+
+        color: #313131;
+        transition: all ease-in 0.2s;
+
+        &:hover {
+          background: #49ad09;
+          color: white;
+          transition: all ease-in 0.2s;
+          text-decoration: none;
+        }
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+      }
+    }
+
+    .links {
+      a:hover {
+        color: #49ad09;
+      }
+
+      & + .links {
+        margin-top: 0;
+      }
+
+      &.contato {
+        form {
+          margin-left: 0;
+
+          input[type="email"] {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .copy {
+      text-align: center !important;
+      padding: 40px;
+    }
+  }
+}

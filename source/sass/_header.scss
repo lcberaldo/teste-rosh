@@ -1,0 +1,183 @@
+.menu-mob {
+  background: #49ad09;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  height: 80px;
+
+  .logo {
+    filter: brightness(0) invert(1);
+  }
+
+  .menu {
+    height: 0;
+    background: #49ad09;
+    width: 100%;
+    transition: height ease-in-out 0.3s;
+    text-align: center;
+
+    a {
+      position: relative;
+      top: -200px;
+      opacity: 0;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 16px;
+      color: white;
+      padding: 5px 10px;
+      display: inline;
+    }
+  }
+
+  .opened {
+    margin-top: 10px;
+    height: 100px;
+    transition: height ease-in-out 0.3s;
+
+    a {
+      top: 0;
+      opacity: 1;
+      transition: opacity ease-in-out 0.6s;
+    }
+  }
+
+  //  MENU ICON
+
+  .hamburger .line {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin: 10px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+  }
+
+  #hamburger-11 {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #hamburger-11.is-active {
+    animation: smallbig 0.6s forwards;
+  }
+
+  @keyframes smallbig {
+    0%,
+    100% {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+    }
+
+    50% {
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+    }
+  }
+
+  #hamburger-11.is-active .line:nth-child(1),
+  #hamburger-11.is-active .line:nth-child(2),
+  #hamburger-11.is-active .line:nth-child(3) {
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+
+  #hamburger-11.is-active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  #hamburger-11.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(13px) rotate(45deg);
+    -ms-transform: translateY(13px) rotate(45deg);
+    -o-transform: translateY(13px) rotate(45deg);
+    transform: translateY(13px) rotate(45deg);
+  }
+
+  #hamburger-11.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+    -ms-transform: translateY(-13px) rotate(-45deg);
+    -o-transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-13px) rotate(-45deg);
+  }
+
+  @media (min-width: map-get($grid-breakpoints,lg)) {
+    width: 100%;
+    background: #f2f2f2;
+
+    .lg-box {
+      max-width: 1140px;
+      width: 100%;
+      height: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        filter: none;
+      }
+
+      .menu {
+        height: unset;
+        width: unset;
+        background: unset;
+        align-items: center;
+
+        a {
+          opacity: 1;
+          top: unset;
+          color: #313131;
+          padding: 5px 20px;
+
+          &.signup {
+            width: fit-content;
+            padding: 15px 40px;
+            display: block;
+
+            margin-left: 20px;
+
+            background: #49ad09;
+            box-shadow: 0px 100px 80px rgba(49, 49, 49, 0.1),
+              0px 64.8148px 46.8519px rgba(49, 49, 49, 0.0759259),
+              0px 38.5185px 25.4815px rgba(49, 49, 49, 0.0607407),
+              0px 20px 13px rgba(49, 49, 49, 0.05),
+              0px 8.14815px 6.51852px rgba(49, 49, 49, 0.0392593),
+              0px 1.85185px 3.14815px rgba(49, 49, 49, 0.0240741);
+            border-radius: 5px;
+
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: white;
+            transition: all ease-in-out 0.3s;
+
+            &:hover {
+              text-decoration: none;
+              transform: scale(1.02);
+              transition: all ease-in-out 0.3s;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+  }
+}
