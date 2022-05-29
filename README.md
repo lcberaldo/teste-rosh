@@ -1,14 +1,12 @@
-:construction: Projeto em construção :construction:
-
 ###### Andamento
 
 - [x] Layout Mobile;
 - [x] Estruturação de campos e custom posts no functions;
 - [x] Cadastro do conteúdo dentro do painel;
-- [ ] Construção do Layout Desktop;
-- [ ] Adaptação do layout Tablets;
-- [ ] Gerar arquivo de importação;
-- [ ] Hospedar;
+- [x] Construção do Layout Desktop;
+- [x] Adaptação do layout Tablets;
+- [x] Gerar arquivo de importação estático;
+- [x] Hospedar;
 
 # Tema criado como teste para a agência Rosh
 
@@ -17,5 +15,7 @@
 - Clone o projeto dentro da pasta themes do WP (wp-content->themes)
 - Abra o projeto usando o VScode ou outro editor
 - Rode o comando gulp dentro da pasta.
+
+**_ou acesse https://desafio-rosh-leonardo.netlify.app/_**
 
 ## ENJOY :grinning:
